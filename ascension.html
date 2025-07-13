@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ascension Portal – NEXA Core</title>
+  <style>
+    body {
+      background-color: #0e0e0e;
+      color: #e0e0e0;
+      font-family: "Segoe UI", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      color: #e54444;
+    }
+    input {
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 1em;
+      background: #111;
+      color: #eee;
+      border: 1px solid #333;
+      width: 300px;
+      text-align: center;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #222;
+      border: 1px solid #444;
+      color: #eee;
+      cursor: pointer;
+    }
+    p#response {
+      margin-top: 20px;
+      color: #e54444;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ascension Protocol</h1>
+  <p>Enter access key:</p>
+  <input type="password" id="password" placeholder="••••••••">
+  <button onclick="checkPassword()">ENTER</button>
+  <p id="response"></p>
+
+  <script>
+    function checkPassword() {
+      const pass = document.getElementById('password').value;
+      if (pass === "vessel43") {
+        window.location.href = "preparation.html";
+      } else {
+        document.getElementById('response').innerText = "ACCESS DENIED. OBSERVERS NOTIFIED.";
+      }
+    }
+  </script>
+</body>
+</html>
